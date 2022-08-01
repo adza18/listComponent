@@ -1,0 +1,85 @@
+.white {
+    background-color: #fff;
+    margin-left: 2px;
+    font-size: 16px;
+    font-size: 1vw;
+    font-weight: 600;
+}
+
+
+.dashed{
+    border: 1px dashed gainsboro;
+  
+}
+
+.input {
+    border: transparent;
+  }
+
+.title{
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+
+.circle-progress {
+   
+    // height: 2.0vh;
+    // width: 1.0vw;
+    min-width: 10px; 
+    min-height: 10px;
+    border-radius: 50%;
+   
+  }
+
+
+  .hover-content{
+      display: none;
+      
+  }
+
+    .hover-show:hover{
+      .hover-content{
+        display: block;
+        // transform: scaleY(1.5);
+      }
+    }
+
+    
+    
+   
+
+  
+  
+
+  
+  
+    .img-container{
+      // position: relative;
+      display: flex;
+      justify-content: flex-end;
+      // position: relative;
+      gap:1px;
+      img{
+        border-radius:50% ;
+        // height:auto;
+        // height: 1.5vh;
+        max-height: 3.5vh;
+        max-width:1.5vw;
+
+       
+      }
+    }
+    
+@media (max-width: "581px"){
+  .white{
+    font-size: 16px;
+    font-size: 2.5vw;
+  }
+  
+.circle-progress {
+  min-width: 6px; 
+  min-height: 6px;
+}
+}
+

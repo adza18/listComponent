@@ -1,0 +1,115 @@
+<div style="background-color: #fbfdff"> 
+       <div class="container ps-sm-3 pe-md-5 pe-sm-2 ps-md-5 pb-4" >
+        <div class="row ">
+            <div class="col-2-sm ps-3 pb-3 title">
+                Progress
+                <span>
+                    <button class="btn p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseListProgress"
+                        aria-expanded="true" aria-controls="collapseListProgress">
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+
+        <div class="collapse show" id="collapseListProgress">
+            <div *ngFor="let ticket of progressTickets" class="row white mb-3">
+                <div class="col-12 col-md-5">
+                    <div class="row hover-show">
+                        <div class="col-1 col-md-1 d-flex align-items-center" >
+                            <div class="circle-progress" [ngStyle]="{'background-color':ticket.ticketName === 'progress' ? '#2a9bc0' : 'black'}" ></div>
+                        </div>
+                        <div class="col-4 col-md-4" >{{ticket.issue}}</div> 
+                        <span class="col-7 hover-content"  >
+                            <span class="ps-3"><i class="bi bi-paperclip ps-3"></i>aa</span>
+                            <span class="ps-3"><i class="bi bi-chat-left-dots ps-3"></i>cd</span>
+                            <span class="ps-3"><i class="bi bi-check2-square ps-3"></i>ef</span>
+                        </span>   
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-7">
+                    <div class="row  d-flex justify-content-around">
+                        <div class="col-3 col-md-5 ">
+                            <i class="bi bi-calendar2-week pe-1" ></i>
+                            <span>{{ ticket.dueDate }}</span>
+                        </div>
+                        <div [ngStyle]="{
+                        color: ticket.priority === 'high' ? 'red' : '#006600'
+                        }" class="col-2 col-md-5" >
+                            {{ ticket.priority }}
+                        </div>
+                        <div class="col-2 col-md-2 img-container"  style="border: 2px solid yellow">
+                            <div *ngFor="let i of image">
+                                <span><img [src]='i.url'></span>
+                            </div>
+                          
+                                
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row white dashed">
+                <input type="text" class="input" placeholder="+Add New Ticket" />
+            </div>
+        </div>
+    </div>  
+
+   <!-- <div class="container ps-sm-3 pe-md-5 pe-sm-3 pe-md-5 pb-4" >
+        <div class="row ">
+            <div class="col-2-sm ps-3 pb-3 title">
+                Open
+                <span>
+                    <button class="btn p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseListOpen"
+                        aria-expanded="true" aria-controls="colla#collapseListOpen">
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+
+        <div class="collapse show" id="#collapseListOpen">
+            <div *ngFor="let ticket of openTickets" class="row white mb-3">
+                <div class="col-12 col-md-5">
+                    <div class="row hover-show">
+                        <div class="col-4 col-md-1 d-flex align-items-center" >
+                            <div class="circle-progress" [ngStyle]="{'background-color':ticket.ticketName === 'open' ? '#D3D3D3' : 'black'}"></div>
+                        </div>
+                        <div class="col-2 col-md-2" >{{ticket.ticketName}}</div> 
+                        <span class="col-6 hover-content"  >
+                            <span class="ps-3"><i class="bi bi-paperclip ps-3"></i>aa</span>
+                            <span class="ps-3"><i class="bi bi-chat-left-dots ps-3"></i>cd</span>
+                            <span class="ps-3"><i class="bi bi-check2-square ps-3"></i>ef</span>
+                        </span>   
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-7">
+                    <div class="row  d-flex justify-content-around">
+                        <div class="col-4 col-md-5">
+                            <i class="bi bi-calendar2-week pe-2"></i>
+                            <span>{{ ticket.dueDate }}</span>
+                        </div>
+                        <div [ngStyle]="{
+                        color: ticket.priority === 'high' ? 'red' : '#006600'
+                        }" class="col-3 col-md-5">
+                            {{ ticket.priority }}
+                        </div>
+                        <div class="col-5 col-md-2 img-container" >
+                            <div *ngFor="let i of image">
+                                <span><img [src]='i.url'></span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row white dashed">
+                <input type="text" class="input" placeholder="+Add New Ticket" />
+            </div>
+        </div>
+    </div>   -->
+</div> 
+
+
