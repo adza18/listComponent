@@ -1,0 +1,106 @@
+<!-- <div class="container" style="border: 2px solid black;">
+
+    <table class="table">
+        <thead >
+            <tr>
+                <th class="heading" scope="col">S.N</th>
+                <th class="heading" scope="col">Created Date</th>
+                <th class="heading" scope="col">Ticket ID</th>
+                <th class="heading" scope="col">Project</th>
+                <th class="heading" scope="col">Status</th>
+                <th class="heading" scope="col">Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="content-row p-5" *ngFor="let data of ticketListTable">
+                <td class="ps-4">{{data.sNo}}</td>
+                <td>{{data.createdDate}}</td>
+                <td>{{data.ticketID}}</td>
+                <td>{{data.project}}</td>
+                <td>{{data.status}}</td>
+                <td>{{data.action}}</td>               
+            </tr>
+        </tbody>
+    </table>
+
+
+</div> -->
+
+
+<div class="container pt-3" style="border: 2px solid black;">
+
+    <div class="row title">
+        <div class="col ps-3">Ticket list</div>
+        <div class="col content pt-1 d-flex justify-content-end" style="border:2px solid blue ;">
+            <span><button class="button"><span><i class="cyan-text bi bi-funnel"></i></span>Filter</button></span>
+            <span><button class="button"><span><i class="cyan-text bi bi-box-arrow-up-right"></i></span>Export</button></span>
+            <span><button class="button bg">+Add</button></span>
+        </div>
+    </div>
+
+<div class="wrapper">
+    <div class="table">
+        <div class="row heading p-3 d-flex justify-content-between ">
+            <div class="col-2 col-sm-1">S.No</div>
+            <div class="col-2 col-sm-2">Created Date</div>
+            <div class="col-2 col-sm-2">Ticket ID</div>
+            <div class="col-2 col-sm-1">Project</div>
+            <div class="col-2 col-sm-1">Status</div>
+            <div class="col-2 col-sm-1">Action</div>
+            <!-- <div class="col-1 col-sm-1">S.No</div>
+            <div class="col-1 col-sm-2">Created Date</div>
+            <div class="col-1 col-sm-2">Ticket ID</div>
+            <div class="col-1 col-sm-1">Project</div>
+            <div class="col-1 col-sm-1">Status</div>
+            <div class="col-3 col-sm-1">Action</div> -->
+        </div>
+        <div class="row content d-flex justify-content-between p-3" *ngFor="let data of ticketListTable">
+            <div class="col-2 col-sm-1 ps-sm-4 ">{{data.sNo}}</div>
+            <div class="col-2 col-sm-2">{{data.createdDate}}</div>
+            <div class="col-2 col-sm-2">{{data.ticketID}}</div>
+            <div class="col-2 col-sm-1">{{data.project}}</div>
+            <div class="col-2 col-sm-1 ps-1 " [ngClass]="{'text-success || bg-success':data.status === 'new ticket',
+            'text-danger || bg-danger':data.status === 'pending','text-primary || bg-primary':data.status === 'completed'}" style="--bs-bg-opacity: .5;">
+            {{data.status}}</div>
+            <div class="col-2  col-sm-1">{{data.action}}</div>
+
+            <!-- <div class="col-1 col-sm-1">{{data.sNo}}</div>
+            <div class="col-1 col-sm-2">{{data.createdDate}}</div>
+            <div class="col-1 col-sm-2">{{data.ticketID}}</div>
+            <div class="col-1 col-sm-1">{{data.project}}</div>
+            <div class="col-3 col-sm-1" [ngClass]="{'text-success || bg-success':data.status === 'new ticket',
+            'text-danger || bg-danger':data.status === 'pending','text-primary || bg-primary':data.status === 'completed'}" style="--bs-bg-opacity: .5;">{{data.status}}</div>
+            <div class="col-1  col-sm-1">{{data.action}}</div> -->
+        </div>  
+    </div>
+    
+</div>
+<div class="row footer " style="border:1px solid orange ;">
+    <div class="col-6" style="border:1px solid red ;">Showing 1 of 20 page entries</div>
+    <div class="col-6 d-flex" style="border:1px solid blue ;">
+        <div class="col-6" style="border:1px solid green ;">Show per page</div>
+        <div class="col-6" style="border:1px solid pink ;">
+            <nav class="page-navigation">
+                <ul class="page">
+                    <li class="item">
+                        <a class="link" href="#" aria-label="previous">
+                            <span aria-hidden="true">prev</span>
+                        </a>
+                    </li>
+                    <li class="item"><a class="page-link" href="#">1</a></li>
+                    <li class="item"><a class="page-link" href="#">2</a></li>
+                    <li class="item"><a class="page-link" href="#">2</a></li>
+                    <li class="item">
+                        <a class="link" href="#" aria-label="previous">
+                            <span aria-hidden="true">next</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        
+        </div>
+    </div>
+
+</div>
+</div>

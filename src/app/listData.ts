@@ -41,7 +41,7 @@ export const ticketValues = [
   {
     ticketName: 'review',
     issue: 'bug in backend',
-    dueDate: 'jun 17',
+    dueDate: 'jun 28',
     priority: 'low',
    
   },

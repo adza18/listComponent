@@ -1,0 +1,58 @@
+export const ticketList = [
+  {
+    sNo: 1,
+    createdDate: '2022-10-10',
+    ticketID: 123456,
+    project: 'wallet',
+    status: 'new ticket',
+    action: 'action',
+  },
+  {
+    sNo: 1,
+    createdDate: '2022-10-10',
+    ticketID: 123456,
+    project: 'wallet',
+    status: 'completed',
+    action: 'action',
+  },
+  {
+    sNo: 1,
+    createdDate: '2022-10-10',
+    ticketID: 123456,
+    project: 'wallet',
+    status: 'new ticket',
+    action: 'action',
+  },
+  {
+    sNo: 1,
+    createdDate: '2022-10-10',
+    ticketID: 123456,
+    project: 'wallet',
+    status: 'new ticket',
+    action: 'action',
+  },
+  {
+    sNo: 1,
+    createdDate: '2022-10-10',
+    ticketID: 123456,
+    project: 'wallet',
+    status: 'pending',
+    action: 'action',
+  },
+  {
+    sNo: 1,
+    createdDate: '2022-10-10',
+    ticketID: 123456,
+    project: 'wallet',
+    status: 'completed',
+    action: 'action',
+  },
+  {
+    sNo: 1,
+    createdDate: '2022-10-10',
+    ticketID: 123456,
+    project: 'wallet',
+    status: 'pending',
+    action: 'action',
+  }
+];
